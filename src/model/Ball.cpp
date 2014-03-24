@@ -7,10 +7,11 @@
 
 #include "model/Ball.h"
 #include "base/BodyUserData.h"
+#include "base/CollisionBody.h"
 
 Ball::Ball() {
 	this->imagePath = "C:\\spaceship.bmp";
-
+	this->collisionBody = BALL;
 }
 
 Ball::~Ball() {
@@ -37,7 +38,7 @@ void Ball::init()
 
 	this->body = world->CreateBody(&bodyDef);
 	this->body->CreateFixture(&ballFixture);
-	body->ApplyLinearImpulse( b2Vec2(0,0.-0.01),bodyDef.position,true );
+	body->ApplyLinearImpulse( b2Vec2(0,0.01),bodyDef.position,true );
 }
 
 void Ball::move()
@@ -48,15 +49,16 @@ void Ball::move()
 //
 //	float32 velChange = desiredVel - vel.x;
 //	float32 impulse = body->GetMass() * velChange; //disregard time factor
-	if (start == 0)
-	{
-
-		start = 1;
-	}
+//	if (start == 0)
+//	{
+//
+//		start = 1;
+//	}
 }
 
 void Ball::BeginContact(b2Contact* contact,BodyUserData * collisionObject)
 {
-	body->ApplyLinearImpulse( b2Vec2(-0.02,0),body->GetWorldCenter(),true );
+	//body->ApplyLinearImpulse( b2Vec2(-0.02,0),body->GetWorldCenter(),true );
+
 }
 

@@ -20,6 +20,9 @@ void Body::setPosition(float x, float y)
 	this->worldPosition.y = -y/50 - worldSize.y;
 }
 
+/*
+ * Set the size of a body un pixels
+ */
 void Body::setSize(float w, float h)
 {
 	this->worldSize.x = w/50/2;

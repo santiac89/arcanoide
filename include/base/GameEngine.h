@@ -19,10 +19,13 @@ class GameEngine {
 
 private:
 	std::vector<Body*> bodies;
-	b2World world;
+	b2World *world;
+	bool debug;
+	bool quit;
 
 public:
 	GameEngine();
+	GameEngine(b2World *world);
 	int loop();
 	int init();
 	std::vector<Body*> getBodies();

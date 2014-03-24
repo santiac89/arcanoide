@@ -13,7 +13,7 @@ class GameRenderer;
 #include <SDL2/SDL.h>
 #include <Box2D/Box2D.h>
 #include "base/Renderizable.h"
-
+#include "base/CollisionBody.h"
 
 class Body : public Renderizable {
 
@@ -22,6 +22,7 @@ public:
 	b2World* world;
 	b2Vec2 worldPosition;
 	b2Vec2 worldSize;
+	CollisionBody collisionBody;
 
 	void onRender(GameRenderer& gameRenderer);
 	void setPosition(float x, float y);

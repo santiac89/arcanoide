@@ -18,7 +18,7 @@ Collisionable::~Collisionable() {
 }
 
 void Collisionable::EndContact(b2Contact* contact,BodyUserData* collisionObject) {}
- void Collisionable::PreSolve(b2Contact* contact, const b2Manifold* oldManifold,BodyUserData* collisionObject) {}
+void Collisionable::PreSolve(b2Contact* contact, const b2Manifold* oldManifold,BodyUserData* collisionObject) {}
 void Collisionable::PostSolve(b2Contact* contact, const b2ContactImpulse* impulse,BodyUserData * collisionObject) {}
 void Collisionable::BeginContact(b2Contact* contact,BodyUserData * collisionObject) {}
 

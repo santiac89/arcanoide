@@ -11,15 +11,12 @@
 #include <base/Body.h>
 #include "base/Collisionable.h"
 
-class Ball: public Body,public Collisionable {
+class Ball: public Entity {
 public:
 	int start = 0;
 	Ball();
 	virtual ~Ball();
-
 	void init();
-	void move();
-	void BeginContact(b2Contact* contact,BodyUserData * collisionObject);
 
 };
 
