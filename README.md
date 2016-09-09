@@ -1,4 +1,3 @@
-arcanoide
-=========
+Arkanoid Clone with Box2D and SDL
 
-tranqui 120
+=========
